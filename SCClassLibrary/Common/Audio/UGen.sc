@@ -612,8 +612,7 @@ OutputProxy : UGen {
 		^synthDef.controlNames.detect({ |c| c.index == index });
 	}
 
-	spec_{
-		|spec|
+	spec_{ arg spec;
 		var controlName, name;
 		controlName = this.controlName;
 		if (this.controlName.notNil) {
