@@ -27,8 +27,8 @@ matrix:
 # we install it during the the before_install step
 # with xcode, this requires an additional flag passed during the configuration phase.
 # see README_MACOS.md for details.
-cache:
- - ccache
+# cache:
+#  - ccache
 
 before_install:
  - $TRAVIS_BUILD_DIR/.travis/before-install-$TRAVIS_OS_NAME.sh --qt=$QT
