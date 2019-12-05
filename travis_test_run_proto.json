@@ -188,11 +188,15 @@
     },
     {
       "test": "*",
-      "suite": "TestPattern"
+      "suite": "TestPattern",
+      "skip": true,
+      "skipReason": "reason unknown (FIXME)"
     },
     {
       "test": "*",
-      "suite": "TestPatternProxy"
+      "suite": "TestPatternProxy",
+      "skip": true,
+      "skipReason": "reason unknown (FIXME)"
     },
     {
       "test": "*",
