@@ -45,7 +45,10 @@ before_script:
 script:
  - $TRAVIS_BUILD_DIR/.travis/script-$TRAVIS_OS_NAME.sh
  - export PATH=$TRAVIS_BUILD_DIR/BUILD/Install/bin:$PATH
- - $TRAVIS_BUILD_DIR/.travis/test.sh
+ - export SCLANG=$TRAVIS_BUILD_DIR/BUILD/Install/bin/sclang
+ - if [[ $QT == true ]]; then
+   QPM_DEBUG=1 qpm test.run -l $TRAVIS_BUILD_DIR/BUILD/travis_test_run.json --path $SCLANG --include $HOME/Quarks $TRAVIS_BUILD_DIR/testsuite/classlibrary;
+   fi
  - if [[ $TRAVIS_OS_NAME == osx ]]; then $TRAVIS_BUILD_DIR/.travis/package-osx.sh; fi
 
 before_deploy:

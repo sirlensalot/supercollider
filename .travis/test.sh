@@ -8,4 +8,4 @@ fi
 
 # $TRAVIS_BUILD_DIR/testsuite/sclang/launch_test.py $SCLANG
 
-if [[ $QT == true ]]; then $TRAVIS_BUILD_DIR/.travis/qpm-test.sh; fi
+# if [[ $QT == true ]]; then $TRAVIS_BUILD_DIR/.travis/qpm-test.sh; fi
